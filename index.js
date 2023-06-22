@@ -10,6 +10,8 @@ http.createServer(async function (req, res) {
         });
 
         req.on('end', async function () {
+            console.log("Body:", body)
+
             if (body.slice(0,39) != "https://api.coingecko.com/api/v3/coins/")  {
                 res.end()
                 return
@@ -18,4 +20,9 @@ http.createServer(async function (req, res) {
             res.end()
         });
     }
+    if (req.method == 'POST') {
+        res.write("Hola!")
+        res.end()
+    }
 }).listen(process.env.PORT)
+console.log("Port:", process.env.PORT)
