@@ -4,6 +4,9 @@
   "description": "Requests re-pusher",
   "main": "index.js",
   "license": "ISC",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "node-fetch": "^2.6.11",
     "qs": "^6.11.2"
