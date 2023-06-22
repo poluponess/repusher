@@ -20,7 +20,7 @@ http.createServer(async function (req, res) {
             res.end()
         });
     }
-    if (req.method == 'POST') {
+    if (req.method == 'GET') {
         res.write("Hola!")
         res.end()
     }
